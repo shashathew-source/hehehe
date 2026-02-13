@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Valentine's Day ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  background-color: #ffd6e8;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* First Screen */
+#startScreen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.openBtn {
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: #ff4d94;
+  color: white;
+  border: none;
+  border-radius: 25px;
+}
+
+/* Envelope */
+#envelopeScreen {
+  display: none;
+  padding-top: 50px;
+}
+
+.envelope {
+  width: 200px;
+  height: 120px;
+  background: white;
+  margin: auto;
+  position: relative;
+  border-radius: 10px;
+}
+
+.envelope:before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 200px;
+  height: 120px;
+  background: #ff99cc;
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+  border-radius: 10px;
+}
+
+/* Letter Content */
+#letter {
+  display: none;
+  padding: 20px;
+}
+
+h1 {
+  color: #ff1a75;
+}
+
+.message {
+  color: #b30059;
+  font-size: 18px;
+  margin: 20px;
+}
+
+.photo {
+  width: 80%;
+  max-width: 300px;
+  border-radius: 15px;
+  margin: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- START SCREEN -->
+<div id="startScreen">
+  <button class="openBtn" onclick="openEnvelope()">💌 Click Here To Open 💌</button>
+</div>
+
+<!-- ENVELOPE SCREEN -->
+<div id="envelopeScreen">
+  <div class="envelope" onclick="showLetter()"></div>
+  <p style="color:#ff3385;">Tap the envelope 💕</p>
+</div>
+
+<!-- LETTER CONTENT -->
+<div id="letter">
+  <h1>Happy Valentine's Day Pandiii ❤️</h1>
+
+  <p class="message">
+  You are the best thing that ever happened to me.  
+  Thank you for loving me and being my safe place.  
+  I am so lucky to have you 💖
+  </p>
+
+  <h2 style="color:#ff3385;">Our Memories</h2>
+
+  <img class="photo" src="photo1.jpg">
+  <img class="photo" src="photo2.jpg">
+
+  <p class="message">Forever yours 💌</p>
+</div>
+
+<script>
+function openEnvelope() {
+  document.getElementById("startScreen").style.display = "none";
+  document.getElementById("envelopeScreen").style.display = "block";
+}
+
+function showLetter() {
+  document.getElementById("envelopeScreen").style.display = "none";
+  document.getElementById("letter").style.display = "block";
+}
+</script>
+
+</body>
+</html>
